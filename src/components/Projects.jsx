@@ -38,7 +38,7 @@ export default function Projects() {
                 image: websiteImg4,
                 title: 'My Portfolio',
                 description: 'Discover my projects, expertise, and passion for creating impactful digital experiences.',
-                link: 'https://github.com/TheebigaV/Portfolio.git',
+                link: 'https://github.com/TheebigaV/My-Portfolio.git',
                 tags: ['React', 'Tailwind CSS' , 'EmailJS-Cloud-based email service'],
                 year: '2025'
             },
