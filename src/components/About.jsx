@@ -5,13 +5,7 @@ export default function About() {
     const config = {
         content: (
             <>
-                <p className='text-lg md:text-xl text-white/90 leading-relaxed text-justify mb-6'>
-                    Passionate Software Engineer specializing in modern web development with expertise in frontend technologies. Graduated with Distinction in HND Computing from Pearson College London and currently pursuing BSc (Hons) at Northern Uni (SLIIT).
-                </p>
-                
-                <p className='text-lg md:text-xl text-white/90 leading-relaxed text-justify mb-8'>
-                    Skilled in HTML, CSS, JavaScript, React, and Tailwind CSS, I build responsive web applications that solve real-world problems. Strong problem-solver who thrives in collaborative environments to deliver innovative solutions.
-                </p>
+                <p className='text-lg md:text-xl text-white/90 leading-relaxed text-justify mb-6'>Passionate Software Engineer specializing in modern web development with expertise in frontend technologies. Graduated with Distinction in HND Computing from Pearson College London and currently pursuing BSc (Hons) at Northern Uni (SLIIT). Skilled in HTML, CSS, JavaScript, React, and Tailwind CSS, I build responsive web applications that solve real-world problems. Strong problem-solver who thrives in collaborative environments to deliver innovative solutions.</p>
 
                 <div className='flex gap-8 justify-center md:justify-start'>
                     <div className='flex flex-col items-center group'>
