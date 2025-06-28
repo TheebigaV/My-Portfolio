@@ -11,7 +11,7 @@ export default function Header() {
                 className="font-bold text-white text-xl md:text-2xl hover:scale-105 transition-transform duration-200" 
                 href="#"
             >
-                My Portfolio
+                TV
             </a>
             
             {/* Desktop Navigation */}
