@@ -53,6 +53,7 @@ export default function Projects() {
                 title: 'My Portfolio',
                 description: 'Discover my projects, expertise, and passion for creating impactful digital experiences.',
                 link: 'https://github.com/TheebigaV/My-Portfolio.git',
+<<<<<<< HEAD
                 tags: ['React', 'Tailwind CSS', 'EmailJS'],
                 year: '2025',
                 color: 'bg-rose-100',
@@ -61,16 +62,26 @@ export default function Projects() {
                 accentColor: 'bg-rose-500'
             },
             {
+=======
+                tags: ['React', 'Tailwind CSS' , 'EmailJS-Cloud-based email service'],
+                year: '2025'
+            },
+              {
+>>>>>>> 68d411ad7f3271eab136c2468de6732c7dca409b
                 image: websiteImg5,
                 title: 'E-Commerce Website',
                 description: 'E-Commerce website built with a focus on design, responsiveness, and user experience.',
                 link: 'https://github.com/TheebigaV/E-Commerce.git',
                 tags: ['React', 'Tailwind CSS'],
+<<<<<<< HEAD
                 year: '2025',
                 color: 'bg-violet-100',
                 textColor: 'text-violet-800',
                 borderColor: 'border-violet-300',
                 accentColor: 'bg-violet-500'
+=======
+                year: '2025'
+>>>>>>> 68d411ad7f3271eab136c2468de6732c7dca409b
             }
         ]
     };
@@ -227,5 +238,10 @@ export default function Projects() {
                 </div>
             </div>
         </section>
+<<<<<<< HEAD
     );
 }
+=======
+    )
+}
+>>>>>>> 68d411ad7f3271eab136c2468de6732c7dca409b
