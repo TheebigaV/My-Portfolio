@@ -42,6 +42,14 @@ export default function Projects() {
                 tags: ['React', 'Tailwind CSS' , 'EmailJS-Cloud-based email service'],
                 year: '2025'
             },
+              {
+                image: websiteImg5,
+                title: 'E-Commerce Website',
+                description: 'E-Commerce website built with a focus on design, responsiveness, and user experience.',
+                link: 'https://github.com/TheebigaV/E-Commerce.git',
+                tags: ['React', 'Tailwind CSS'],
+                year: '2025'
+            }
         ]
     }
 
