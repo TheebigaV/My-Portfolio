@@ -19,10 +19,7 @@ export default function Projects() {
                 link: 'https://github.com/TheebigaV/POS_System.git',
                 tags: ['Java'],
                 year: '2023',
-                color: 'bg-indigo-100',
-                textColor: 'text-indigo-800',
-                borderColor: 'border-indigo-300',
-                accentColor: 'bg-indigo-500'
+                accentColor: 'from-blue-500 to-cyan-400'
             },
             {
                 image: websiteImg1,
@@ -31,10 +28,7 @@ export default function Projects() {
                 link: 'https://github.com/TheebigaV/Royal-Food-Corner-Website.git',
                 tags: ['HTML', 'CSS', 'JS'],
                 year: '2023',
-                color: 'bg-amber-100',
-                textColor: 'text-amber-800',
-                borderColor: 'border-amber-300',
-                accentColor: 'bg-amber-500'
+                accentColor: 'from-amber-500 to-orange-400'
             },
             {
                 image: websiteImg3,
@@ -43,45 +37,25 @@ export default function Projects() {
                 link: 'https://github.com/TheebigaV/Game.git',
                 tags: ['HTML', 'CSS', 'JS', 'Firebase'],
                 year: '2025',
-                color: 'bg-emerald-100',
-                textColor: 'text-emerald-800',
-                borderColor: 'border-emerald-300',
-                accentColor: 'bg-emerald-500'
+                accentColor: 'from-green-500 to-teal-400'
             },
             {
                 image: websiteImg4,
                 title: 'My Portfolio',
                 description: 'Discover my projects, expertise, and passion for creating impactful digital experiences.',
                 link: 'https://github.com/TheebigaV/My-Portfolio.git',
-<<<<<<< HEAD
                 tags: ['React', 'Tailwind CSS', 'EmailJS'],
                 year: '2025',
-                color: 'bg-rose-100',
-                textColor: 'text-rose-800',
-                borderColor: 'border-rose-300',
-                accentColor: 'bg-rose-500'
+                accentColor: 'from-purple-500 to-pink-400'
             },
             {
-=======
-                tags: ['React', 'Tailwind CSS' , 'EmailJS-Cloud-based email service'],
-                year: '2025'
-            },
-              {
->>>>>>> 68d411ad7f3271eab136c2468de6732c7dca409b
                 image: websiteImg5,
                 title: 'E-Commerce Website',
                 description: 'E-Commerce website built with a focus on design, responsiveness, and user experience.',
                 link: 'https://github.com/TheebigaV/E-Commerce.git',
                 tags: ['React', 'Tailwind CSS'],
-<<<<<<< HEAD
                 year: '2025',
-                color: 'bg-violet-100',
-                textColor: 'text-violet-800',
-                borderColor: 'border-violet-300',
-                accentColor: 'bg-violet-500'
-=======
-                year: '2025'
->>>>>>> 68d411ad7f3271eab136c2468de6732c7dca409b
+                accentColor: 'from-red-500 to-rose-400'
             }
         ]
     };
@@ -96,84 +70,89 @@ export default function Projects() {
         responsive: [
             {
                 breakpoint: 1024,
-                settings: { slidesToShow: 2 }
+                settings: { 
+                    slidesToShow: 2,
+                    dots: true 
+                }
             },
             {
-                breakpoint: 768,
-                settings: { slidesToShow: 1 }
+                breakpoint: 640,
+                settings: { 
+                    slidesToShow: 1,
+                    dots: true 
+                }
             }
         ]
     };
 
-    const animations = [
-        { 
-            initial: { y: 50, opacity: 0, rotate: -2 }, 
-            animate: { y: 0, opacity: 1, rotate: 0 },
-            transition: { type: 'spring', stiffness: 100 }
+    const animations = {
+        container: {
+            hidden: { opacity: 0 },
+            show: {
+                opacity: 1,
+                transition: {
+                    staggerChildren: 0.1
+                }
+            }
         },
-        { 
-            initial: { scale: 0.8, opacity: 0 }, 
-            animate: { scale: 1, opacity: 1 },
-            transition: { type: 'spring', bounce: 0.4 }
+        item: {
+            hidden: { y: 20, opacity: 0 },
+            show: { 
+                y: 0, 
+                opacity: 1,
+                transition: {
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 10
+                }
+            }
         },
-        { 
-            initial: { x: -50, opacity: 0 }, 
-            animate: { x: 0, opacity: 1 },
-            transition: { type: 'spring', stiffness: 80 }
-        },
-        { 
-            initial: { rotateY: 90, opacity: 0 }, 
-            animate: { rotateY: 0, opacity: 1 },
-            transition: { duration: 0.8 }
-        },
-        { 
-            initial: { y: -50, opacity: 0, rotate: 2 }, 
-            animate: { y: 0, opacity: 1, rotate: 0 },
-            transition: { type: 'spring', stiffness: 100 }
+        hover: {
+            y: -10,
+            transition: { 
+                type: "spring",
+                stiffness: 400,
+                damping: 10
+            }
         }
-    ];
+    };
 
     return (
-        <section id='projects' className="py-20 px-5 bg-[#1e1b4b] text-white">
-            <div className="max-w-6xl mx-auto">
-                <div className="mb-12 text-center md:text-left">
-                    <motion.h1 
-                        className="text-4xl font-bold inline-block pb-2 mb-4 relative"
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        Projects
-                        <motion.span 
-                            className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"
-                            initial={{ scaleX: 0 }}
-                            animate={{ scaleX: 1 }}
-                            transition={{ duration: 0.8, delay: 0.3 }}
-                        />
-                    </motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.5 }}
-                    >
-                        These are the projects I built throughout my learning and development journey.
-                    </motion.p>
-                </div>
+        <section id='projects' className="py-20 px-4 sm:px-6 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+            <div className="max-w-7xl mx-auto">
+                <motion.div 
+                    className="mb-16 text-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                >
+                    <h2 className="text-sm font-semibold tracking-wider text-cyan-400 uppercase mb-2">My Work</h2>
+                    <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 mb-4">
+                        Featured Projects
+                    </h1>
+                    <p className="max-w-2xl mx-auto text-gray-300 text-lg">
+                        A collection of my recent work showcasing my skills and creativity.
+                    </p>
+                </motion.div>
 
-                <div className="slider-container">
+                <motion.div
+                    variants={animations.container}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, margin: "-100px" }}
+                    className="slider-container"
+                >
                     <Slider {...settings}>
                         {config.projects.map((project, index) => (
                             <motion.div
                                 key={index}
-                                className="px-2"
-                                initial={animations[index % animations.length].initial}
-                                animate={animations[index % animations.length].animate}
-                                transition={animations[index % animations.length].transition}
-                                whileHover={{ y: -5 }}
+                                className="px-3"
+                                variants={animations.item}
+                                whileHover="hover"
                             >
-                                <div className={`${project.color} ${project.textColor} rounded-xl overflow-hidden border ${project.borderColor} hover:shadow-lg transition-all duration-300 h-[350px] flex flex-col justify-between group`}>
+                                <div className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-cyan-400/30 transition-all duration-300 h-full flex flex-col group shadow-lg hover:shadow-xl hover:shadow-cyan-500/10">
                                     {/* Image */}
-                                    <div className="relative overflow-hidden h-32">
+                                    <div className="relative overflow-hidden h-48">
                                         <motion.img
                                             className="w-full h-full object-cover"
                                             src={project.image}
@@ -181,18 +160,18 @@ export default function Projects() {
                                             whileHover={{ scale: 1.05 }}
                                             transition={{ duration: 0.3 }}
                                         />
-                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                                             {project.link ? (
                                                 <a
                                                     href={project.link}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className={`flex items-center gap-2 ${project.accentColor} text-white px-3 py-1 rounded hover:opacity-90 text-xs`}
+                                                    className="flex items-center gap-2 bg-white text-gray-900 px-4 py-2 rounded-full font-medium hover:bg-cyan-400 transition-colors duration-300 text-sm"
                                                 >
-                                                    View Project <FiExternalLink />
+                                                    View Project <FiExternalLink className="text-sm" />
                                                 </a>
                                             ) : (
-                                                <span className="bg-gray-500 text-white px-3 py-1 rounded text-xs">
+                                                <span className="bg-gray-600 text-white px-4 py-2 rounded-full font-medium text-sm">
                                                     Coming Soon
                                                 </span>
                                             )}
@@ -200,48 +179,59 @@ export default function Projects() {
                                     </div>
 
                                     {/* Content */}
-                                    <div className="p-4 flex flex-col justify-between flex-grow">
-                                        <div>
-                                            <div className="flex justify-between items-center mb-1">
-                                                <motion.h3 
-                                                    className="text-md font-bold group-hover:underline"
-                                                    whileHover={{ scale: 1.02 }}
-                                                >
+                                    <div className="p-6 flex flex-col flex-grow">
+                                        <div className="mb-4">
+                                            <div className="flex justify-between items-start mb-2">
+                                                <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
                                                     {project.title}
-                                                </motion.h3>
-                                                <span className={`text-xs ${project.accentColor}/20 px-2 py-0.5 rounded-full ${project.textColor}`}>
+                                                </h3>
+                                                <span className="text-xs bg-gray-700 text-cyan-400 px-2 py-1 rounded-full">
                                                     {project.year}
                                                 </span>
                                             </div>
-                                            <p className="text-sm opacity-90 mb-2 h-[60px] overflow-hidden leading-snug">
+                                            <p className="text-gray-300 text-sm leading-relaxed mb-4">
                                                 {project.description}
                                             </p>
                                         </div>
 
                                         {/* Tags */}
-                                        <div className="flex flex-wrap gap-1.5 mt-auto">
-                                            {project.tags.map((tag, i) => (
-                                                <motion.span
-                                                    key={i}
-                                                    className={`${project.accentColor}/20 text-xs px-2 py-0.5 rounded-full ${project.textColor}`}
-                                                    whileHover={{ scale: 1.05 }}
-                                                >
-                                                    {tag}
-                                                </motion.span>
-                                            ))}
+                                        <div className="mt-auto">
+                                            <div className="flex flex-wrap gap-2">
+                                                {project.tags.map((tag, i) => (
+                                                    <span
+                                                        key={i}
+                                                        className={`text-xs font-medium px-3 py-1 rounded-full bg-gradient-to-r ${project.accentColor} text-white`}
+                                                    >
+                                                        {tag}
+                                                    </span>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </motion.div>
                         ))}
                     </Slider>
-                </div>
+                </motion.div>
+
+                <motion.div 
+                    className="mt-16 text-center"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.4 }}
+                    viewport={{ once: true }}
+                >
+                    <a
+                        href="https://github.com/TheebigaV"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-6 py-3 border border-cyan-400 text-cyan-400 rounded-full font-medium hover:bg-cyan-400/10 transition-colors duration-300"
+                    >
+                        View All Projects on GitHub
+                        <FiExternalLink className="ml-2" />
+                    </a>
+                </motion.div>
             </div>
         </section>
-<<<<<<< HEAD
-    );
-}
-=======
     )
 }
->>>>>>> 68d411ad7f3271eab136c2468de6732c7dca409b
