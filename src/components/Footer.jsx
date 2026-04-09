@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaMedium } from 'react-icons/fa';
 
 export default function Footer() {
     const emailAddress = "theebivicky03@gmail.com";
@@ -23,6 +23,14 @@ export default function Footer() {
                         className="p-2 rounded-full hover:bg-blue-700 transition-colors"
                     >
                         <FaLinkedin className="text-2xl" />
+                    </a>
+                    <a 
+                        href="https://medium.com/@theebivicky03" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="p-2 rounded-full hover:bg-blue-700 transition-colors"
+                    >
+                        <FaMedium className="text-2xl" />
                     </a>
                     <a 
                         href={`mailto:${emailAddress}`} 

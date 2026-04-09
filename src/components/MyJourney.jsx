@@ -36,9 +36,16 @@ export default function Resume() {
 
   const education = [
     {
-      degree: "BSc (Hons) in Software Engineering",
-      period: "Mar 2025 - Present",
-      institution: "Northern Uni (SLIIT)",
+      degree: "MSc in Information Technology",
+      period: "Jan 2026 - Present",
+      institution: "SLIIT",
+      icon: "🎓"
+    },
+    {
+      degree: "BSc (Hons) Computer Science & Software Engineering",
+      period: "Jan 2025 - Oct 2025",
+      institution: "University of Bedfordshire (Northern Uni / SLIIT)",
+      achievements: ["Graduated with First Class Honours"],
       icon: "🎓"
     },
     {
@@ -65,11 +72,11 @@ export default function Resume() {
 
   const workExperience = [
     {
-      position: "Frontend Developer Intern",
+      position: "Full Stack Developer Intern",
       company: "Microwe",
       period: "Jun 2025 - Present",
       icon: "💼",
-      techStack: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+      techStack: ["React", "Next.js", "Node.js", "Laravel", "Tailwind CSS"],
       achievements: [],
       highlights: []
     }
@@ -78,13 +85,13 @@ export default function Resume() {
   const skills = [
     {
       category: "Frontend",
-      items: ["HTML5", "CSS3", "JavaScript", "React", "Tailwind CSS", "PHP"],
+      items: ["React", "Next.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS"],
       icon: "💻",
       color: "from-blue-100 to-blue-50"
     },
     {
       category: "Backend",
-      items: ["Python", "Laravel"],
+      items: ["Node.js", "Laravel", "Python", "PHP"],
       icon: "⚙️",
       color: "from-purple-100 to-purple-50"
     },
@@ -96,7 +103,7 @@ export default function Resume() {
     },
     {
       category: "Database",
-      items: ["MySQL", "Firebase"],
+      items: ["MySQL", "Firebase", "MongoDB"],
       icon: "🗄️",
       color: "from-emerald-100 to-emerald-50"
     },
@@ -112,13 +119,13 @@ export default function Resume() {
     <section id='resume' className='relative py-12 md:py-20 overflow-hidden bg-gradient-to-br from-blue-50/30 to-purple-50/30'>
       {/* Animated background elements */}
       <div className='absolute inset-0 -z-10 overflow-hidden'>
-        <motion.div 
+        <motion.div
           initial={{ x: -100, y: -100, opacity: 0 }}
           animate={{ x: 0, y: 0, opacity: 0.1 }}
           transition={{ duration: 1, delay: 0.5 }}
           className='absolute top-1/4 -left-20 w-64 h-64 md:w-96 md:h-96 bg-blue-200/20 rounded-full filter blur-3xl'
         ></motion.div>
-        <motion.div 
+        <motion.div
           initial={{ x: 100, y: 100, opacity: 0 }}
           animate={{ x: 0, y: 0, opacity: 0.1 }}
           transition={{ duration: 1, delay: 0.7 }}
@@ -134,7 +141,7 @@ export default function Resume() {
         className='max-w-7xl mx-auto px-4 sm:px-6'
       >
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           variants={fadeIn('up')}
           className='text-center mb-12 md:mb-16'
         >
@@ -151,7 +158,7 @@ export default function Resume() {
           {/* Left Column - Education & Experience */}
           <div className='lg:w-1/2 space-y-8 md:space-y-12'>
             {/* Education Section */}
-            <motion.div 
+            <motion.div
               variants={fadeIn('right')}
               className='bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100 p-4 sm:p-6'
             >
@@ -186,7 +193,7 @@ export default function Resume() {
                         </span>
                       </div>
                       {edu.achievements?.length > 0 && (
-                        <motion.ul 
+                        <motion.ul
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           className='mt-3 sm:mt-4 space-y-1 sm:space-y-2 pl-2'
@@ -206,7 +213,7 @@ export default function Resume() {
             </motion.div>
 
             {/* Work Experience Section */}
-            <motion.div 
+            <motion.div
               variants={fadeIn('right', 0.2)}
               className='bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100 p-4 sm:p-6'
             >
@@ -221,9 +228,8 @@ export default function Resume() {
                   <motion.div
                     key={index}
                     variants={fadeIn('up', 0.3 + index * 0.1)}
-                    className={`bg-white p-4 sm:p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 ${
-                      job.company === 'Microwe' ? 'relative overflow-hidden group' : ''
-                    }`}
+                    className={`bg-white p-4 sm:p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 ${job.company === 'Microwe' ? 'relative overflow-hidden group' : ''
+                      }`}
                   >
                     {job.company === 'Microwe' && (
                       <>
@@ -239,27 +245,24 @@ export default function Resume() {
                             {job.icon}
                           </span>
                           <div>
-                            <h4 className={`text-base sm:text-lg font-bold ${
-                              job.company === 'Microwe' 
-                                ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600' 
+                            <h4 className={`text-base sm:text-lg font-bold ${job.company === 'Microwe'
+                                ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600'
                                 : 'text-gray-800'
-                            }`}>
+                              }`}>
                               {job.position}
                             </h4>
-                            <p className={`font-medium text-sm sm:text-base ${
-                              job.company === 'Microwe' 
-                                ? 'text-blue-700' 
+                            <p className={`font-medium text-sm sm:text-base ${job.company === 'Microwe'
+                                ? 'text-blue-700'
                                 : 'text-gray-600'
-                            }`}>
+                              }`}>
                               {job.company}
                             </p>
                           </div>
                         </div>
-                        <span className={`px-2 py-0.5 sm:px-3 sm:py-1 text-xs font-medium rounded-full whitespace-nowrap self-start sm:self-auto ${
-                          job.company === 'Microwe'
+                        <span className={`px-2 py-0.5 sm:px-3 sm:py-1 text-xs font-medium rounded-full whitespace-nowrap self-start sm:self-auto ${job.company === 'Microwe'
                             ? 'bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800'
                             : 'bg-purple-100 text-purple-800'
-                        }`}>
+                          }`}>
                           {job.period}
                         </span>
                       </div>
@@ -276,7 +279,7 @@ export default function Resume() {
                                   initial={{ scale: 0.9, opacity: 0 }}
                                   animate={{ scale: 1, opacity: 1 }}
                                   transition={{ delay: 0.4 + index * 0.1 + i * 0.05 }}
-                                  whileHover={{ 
+                                  whileHover={{
                                     y: -2,
                                     backgroundColor: 'rgba(99, 102, 241, 0.1)'
                                   }}
@@ -297,7 +300,7 @@ export default function Resume() {
           </div>
 
           {/* Right Column - Skills */}
-          <motion.div 
+          <motion.div
             variants={fadeIn('left', 0.4)}
             className='lg:w-1/2'
           >
@@ -331,7 +334,7 @@ export default function Resume() {
                             initial={{ scale: 0.9, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             transition={{ delay: 0.6 + index * 0.1 + i * 0.03 }}
-                            whileHover={{ 
+                            whileHover={{
                               y: -3,
                               boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
                             }}

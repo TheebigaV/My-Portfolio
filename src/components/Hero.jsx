@@ -1,6 +1,6 @@
 import HeroImg from '../assets/img4.png';
 import { AiOutlineLinkedin, AiOutlineGithub } from "react-icons/ai";
-import { FaEnvelope, FaDownload } from "react-icons/fa";
+import { FaEnvelope, FaDownload, FaMedium } from "react-icons/fa";
 import cvFile from '../assets/Theebiga Vicknarajah.pdf'; 
 import { useState, useEffect } from 'react';
 
@@ -18,11 +18,12 @@ export default function Hero() {
     }, []);
 
     const config = {
-        subtitle: "I am a creative Front-End Developer passionate about crafting elegant, responsive solutions that deliver exceptional user experiences across all devices.",
+        subtitle: "I am a passionate Full-Stack Developer specializing in building modern, responsive, and scalable web applications that deliver seamless user experiences across all devices.",
         social: {
             linkedIn: "https://www.linkedin.com/in/theebiga-vicknarajah-2745a8257/",
             gitHub: "https://github.com/TheebigaV",
-            email: "mailto:theebivicky03@gmail.com"
+            email: "mailto:theebivicky03@gmail.com",
+            medium: "https://medium.com/@theebivicky03"
         },
         cvDownload: 'Theebiga_Vicknarajah.pdf'
     };
@@ -72,6 +73,15 @@ export default function Hero() {
                         aria-label="Email"
                     >
                         <FaEnvelope size={isMobile ? 32 : 40} />
+                    </a>
+                    <a 
+                        href={config.social.medium} 
+                        className='hover:text-blue-900 transition-all duration-300 transform hover:scale-110' 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="Medium"
+                    >
+                        <FaMedium size={isMobile ? 32 : 40} />
                     </a>
                 </div>
                 

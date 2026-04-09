@@ -5,7 +5,12 @@ export default function About() {
     const config = {
         content: (
             <>
-                <p className='text-lg md:text-xl text-white/90 leading-relaxed text-justify mb-6'>Passionate Software Engineer specializing in modern web development with expertise in frontend technologies. Graduated with Distinction in HND Computing from Pearson College London and currently pursuing BSc (Hons) at Northern Uni (SLIIT). Skilled in HTML, CSS, JavaScript, React, and Tailwind CSS, I build responsive web applications that solve real-world problems. Strong problem-solver who thrives in collaborative environments to deliver innovative solutions.</p>
+                <p className='text-lg md:text-xl text-white/90 leading-relaxed text-justify mb-4'>
+                    Passionate Full-Stack Developer specializing in modern web development with expertise in both frontend and backend technologies. I graduated with First Class Honours in BSc (Hons) Computer Science & Software Engineering from the University of Bedfordshire through the Northern Uni (SLIIT) and SLIIT City Uni collaboration, demonstrating strong academic excellence and technical proficiency. Prior to this, I completed an HND in Computing (Software Engineering) from Pearson College London with Distinction, which provided me with a solid foundation in both theoretical and practical skills. I am skilled in HTML, CSS, JavaScript, React, Tailwind CSS, Node.js, and database management, and I build responsive, efficient, and scalable web applications that solve real-world problems.
+                </p>
+                <p className='text-lg md:text-xl text-white/90 leading-relaxed text-justify mb-6'>
+                    During my studies, I actively participated in personal and group projects that enhanced my problem-solving, teamwork, and communication abilities. I am currently pursuing my Master’s degree at SLIIT, further strengthening my knowledge and expertise in the field. I am seeking an internship where I can apply my skills to real-world challenges, contribute to organizational success, and continue advancing my expertise in full-stack development.
+                </p>
 
                 <div className='flex gap-8 justify-center md:justify-start'>
                     <div className='flex flex-col items-center group'>
@@ -14,7 +19,7 @@ export default function About() {
                     </div>
                     <div className='flex flex-col items-center group'>
                         <FaLaptopCode className='text-3xl md:text-4xl text-white group-hover:text-green-400 transition-colors' />
-                        <span className='text-white mt-2'>Frontend</span>
+                        <span className='text-white mt-2'>Full-Stack</span>
                     </div>
                     <div className='flex flex-col items-center group'>
                         <FaGraduationCap className='text-3xl md:text-4xl text-white group-hover:text-purple-400 transition-colors' />
